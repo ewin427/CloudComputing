@@ -2,45 +2,67 @@
     <head>
         <title>Page Title</title>
 
+        <script>
+            function printName(){
+                console.log("hey")
+                inputname = document.getElementById("NAME").value
+                document.getElementById("HELLO H1").innerHTML = "Hello " + inputname + "!"
+            }
+        </script>
+
     </head>
     <body>
-        <h1>Hello World</h1>
+        <h1 id="HELLO H1">Hello World</h1>
+        <br>
+        
+        <input type="text" id="NAME"></input>
+        <button onclick="printName()">Change Name</button>
+        <br>
+
+        <p>hey</p>
+        <br>
+
+        <table>
+            <tr>
+              <th>Company</th>
+              <th>Contact</th>
+              <th>Country</th>
+            </tr>
+            <tr>
+              <td>Alfreds Futterkiste</td>
+              <td>Maria Anders</td>
+              <td>Germany</td>
+            </tr>
+            <tr>
+              <td>Centro comercial Moctezuma</td>
+              <td>Francisco Chang</td>
+              <td>Mexico</td>
+            </tr>
+        </table>
+        <br>
+
+        <p id="totals"></p>
+        <br>
 
         <script>
             numbers = [0,1,2,3,4,5,6,7,8,9]
 
             products = ['apple','banana','cereal']
-            price = [1.76,.99,3.45]
+            price = [1.12,.88,3]
             quantity = [2,5,7]
 
+            text = ""
             for (let i = 0; i < products.length; i++) {
                 total = price[i] * quantity[i]
              
-                console.log(products[i])
-                console.log(total)
+                text = text + products[i] + ": " + total + "<br>"
+                console.log(text)
             }
 
+            document.getElementById("totals").innerHTML = text
 
         </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <br>
 
 
     </body>
