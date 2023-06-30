@@ -7,13 +7,20 @@
         <h1>Hello World</h1>
 
         <script>
-            products = ['apple']
-            price = [1.76]
-            quantity = [2]
+            numbers = [0,1,2,3,4,5,6,7,8,9]
 
-            total = price * quantity
+            products = ['apple','banana','cereal']
+            price = [1.76,.99,3.45]
+            quantity = [2,5,7]
 
-            console.log(total)
+            for (let i = 0; i < products.length; i++) {
+                total = price[i] * quantity[i]
+             
+                console.log(products[i])
+                console.log(total)
+            }
+
+
         </script>
 
 
