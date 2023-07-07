@@ -1,5 +1,4 @@
-{
-  "pokemon": [
+[
     {
       "name": "Pikachu",
       "type": "Electric",
@@ -36,4 +35,3 @@
       "generation": "Generation I"
     }
   ]
-}
