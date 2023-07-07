@@ -5,87 +5,35 @@
     </head>
     <body>
 
-        <table id="pokemonTable" border="1">
-        <!-- <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Species</th>
-            <th>Weaknesses</th>
-            <th>Generation</th>
-        </tr> -->
-        </table>
-        <br>
-        <table id="pokemonTableWeb" border="1">
-        <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Species</th>
-            <th>Weaknesses</th>
-            <th>Generation</th>
-        </tr>
-        </table>
+        <table id="pokemonTable" border="1"></table>
 
         <script>
 
-            pokemon = 
-            `[
-                {
-                "name": "Pikachu",
-                "type": "Electric",
-                "species": "Mouse Pokemon",
-                "weaknesses": "Ground",
-                "generation": "Generation I"
-                },
-                {
-                "name": "Charizard",
-                "type": "Fire, Flying",
-                "species": "Flame Pokemon",
-                "weaknesses": "Water, Electric, Rock",
-                "generation": "Generation I"
-                },
-                {
-                "name": "Bulbasaur",
-                "type": "Grass, Poison",
-                "species": "Seed Pokemon",
-                "weaknesses": "Fire, Psychic, Flying, Ice",
-                "generation": "Generation I"
-                },
-                {
-                "name": "Squirtle",
-                "type": "Water",
-                "species": "Tiny Turtle Pokemon",
-                "weaknesses": "Electric, Grass",
-                "generation": "Generation I"
-                },
-                {
-                "name": "Jigglypuff",
-                "type": "Normal, Fairy",
-                "species": "Balloon Pokemon",
-                "weaknesses": "Poison, Steel",
-                "generation": "Generation I"
+            fetch('https://raw.githubusercontent.com/ewin427/CloudComputing/main/Assignment%207.json')
+                .then(response => response.json())
+                .then(data => processData(data));
+
+            function processData(data){
+                var obj = data;
+
+            text = "<tr><th>Name</th><th>Type</th><th>Species</th><th>Weaknesses</th><th>Generation</th></tr>";
+
+                for (let i = 0; i < obj.length; i++) {
+                    text = text + "<tr>"
+                        text = text + "<td>" + obj[i].name + "</td>" 
+                        text = text + "<td>" + obj[i].type + "</td>" 
+                        text = text + "<td>" + obj[i].species + "</td>" 
+                        text = text + "<td>" + obj[i].weaknesses + "</td>" 
+                        text = text + "<td>" + obj[i].generation + "</td>" 
+                    text = text + "</tr>"
+
                 }
-            ]`
 
-            var obj = JSON.parse(pokemon);
-
-            text = "<tr><th>Name</th><th>Type</th><th>Species</th><th>Weaknesses</th><th>Generation</th></tr>"
-
-            for (let i = 0; i < obj.length; i++) {
-                text = text + "<tr>"
-                    text = text + "<td>" + obj[i].name + "</td>" 
-                    text = text + "<td>" + obj[i].type + "</td>" 
-                    text = text + "<td>" + obj[i].species + "</td>" 
-                    text = text + "<td>" + obj[i].weaknesses + "</td>" 
-                    text = text + "<td>" + obj[i].generation + "</td>" 
-                text = text + "</tr>"
-
+                document.getElementById("pokemonTable").innerHTML = text
             }
 
-            document.getElementById("pokemonTable").innerHTML = text
 
 
-            
-                        
         </script>
     </body>
 </html>
