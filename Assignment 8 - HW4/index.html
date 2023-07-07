@@ -10,11 +10,11 @@
         <script>
 
             fetch('https://raw.githubusercontent.com/ewin427/CloudComputing/main/Assignment%208%20-%20HW4/Assignment%207.json')
-                .then(response => response.text())
-                .then(text => processData(PK))
+                .then(response => response.data())
+                .then(data => processData(data));
 
-            function processData(PK){
-                var obj = PK
+            function processData(data){
+                var obj = data;
 
             text = "<tr><th>Name</th><th>Type</th><th>Species</th><th>Weaknesses</th><th>Generation</th></tr>"
 
