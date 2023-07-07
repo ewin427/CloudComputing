@@ -14,9 +14,9 @@
                 .then(data => processData(data));
 
             function processData(data){
-                var obj = data;
+                var obj = data
 
-            text = "<tr><th>Name</th><th>Type</th><th>Species</th><th>Weaknesses</th><th>Generation</th></tr>";
+            text = "<tr><th>Name</th><th>Type</th><th>Species</th><th>Weaknesses</th><th>Generation</th></tr>"
 
                 for (let i = 0; i < obj.length; i++) {
                     text = text + "<tr>"
@@ -26,7 +26,6 @@
                         text = text + "<td>" + obj[i].weaknesses + "</td>" 
                         text = text + "<td>" + obj[i].generation + "</td>" 
                     text = text + "</tr>"
-
                 }
 
                 document.getElementById("pokemonTable").innerHTML = text
