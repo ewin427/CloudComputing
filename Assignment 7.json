@@ -1,0 +1,39 @@
+{
+  "pokemon": [
+    {
+      "name": "Pikachu",
+      "type": "Electric",
+      "species": "Mouse Pokemon",
+      "weaknesses": "Ground",
+      "generation": "Generation I"
+    },
+    {
+      "name": "Charizard",
+      "type": "Fire, Flying",
+      "species": "Flame Pokemon",
+      "weaknesses": "Water, Electric, Rock",
+      "generation": "Generation I"
+    },
+    {
+      "name": "Bulbasaur",
+      "type": "Grass, Poison",
+      "species": "Seed Pokemon",
+      "weaknesses": "Fire, Psychic, Flying, Ice",
+      "generation": "Generation I"
+    },
+    {
+      "name": "Squirtle",
+      "type": "Water",
+      "species": "Tiny Turtle Pokemon",
+      "weaknesses": "Electric, Grass",
+      "generation": "Generation I"
+    },
+    {
+      "name": "Jigglypuff",
+      "type": "Normal, Fairy",
+      "species": "Balloon Pokemon",
+      "weaknesses": "Poison, Steel",
+      "generation": "Generation I"
+    }
+  ]
+}
