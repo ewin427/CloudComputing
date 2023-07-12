@@ -8,7 +8,7 @@
         "thumbnailUrl": "licoricethumbnail.png"
     },
     {
-        "product_name": "Gummy Bear",
+        "product_name": "Gummy Bears",
         "id": 2,
         "price": 1.68,
         "description": "1lb of Gummy Bears",
@@ -29,7 +29,7 @@
         "price": 0.25,
         "description": "Single Lollipop",
         "url": "lollipop.html",
-        "thumbnailUrl": "lollipopthumbnail.jpg"
+        "thumbnailUrl": "lollipopthumbnail.png"
     },
     {
         "product_name": "Chocolate Bar",
