@@ -9,7 +9,7 @@
      
       <script>
 
-        fetch('https://raw.githubusercontent.com/ErkCurley/CloudComputing/main/HW4/products.json')
+        fetch('https://raw.githubusercontent.com/ewin427/CloudComputing/main/Final%20Project/candyshop.json')
           .then(response => response.json())
           .then(data => processData(data));
 
@@ -18,9 +18,9 @@
         
      
 
-          quantitys = [2,5,4,5]
+          quantitys = [3,4,2,1,7]
 
-          text = "<tr><th>Product Name</th><th>Price</th><th>Quantity</th><th>Total</th></tr>";
+          text = "<tr><th>Product</th><th>Product Name</th><th>Price</th><th>Quantity</th><th>Total</th></tr>";
 
 
           for (let i = 0; i < obj.length; i++) {
@@ -46,7 +46,7 @@
             text = text + "<td>" + "<a href= 'products/" + obj[i].url + "'>" + obj[i].product_name + "</a>" + "</td>" 
             text = text + "<td>" + price + "</td>"
             text = text + "<td>" + quantity + "</td>"
-            text = text + "<td>" + total.toPrecision(4) + "</td>"
+            text = text + "<td>$" + total.toPrecision(3) + "</td>"
             text = text + "<td>" + obj[i].description + "</td>"
             
             text = text + "</tr>"

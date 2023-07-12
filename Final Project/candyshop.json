@@ -1,6 +1,6 @@
 [
     {
-        "product name": "Licorice",
+        "product_name": "Licorice",
         "id": 1,
         "price": 3.25,
         "description": "1lb of Black Licorice",
@@ -8,7 +8,7 @@
         "thumbnailUrl": "licoricethumbnail.jpg"
     },
     {
-        "product name": "Gummy Bear",
+        "product_name": "Gummy Bear",
         "id": 2,
         "price": 1.68,
         "description": "1lb of Gummy Bears",
@@ -16,7 +16,7 @@
         "thumbnailUrl": "gummybearsthumbnail.jpg"
     },
     {
-        "product name": "Bubble Gum",
+        "product_name": "Bubble Gum",
         "id": 3,
         "price": 1.15,
         "description": "1lb of Bubble Gum",
@@ -24,7 +24,7 @@
         "thumbnailUrl": "bubblegumthumbnail.jpg"
     },
     {
-        "product name": "Lollypop",
+        "product_name": "Lollypop",
         "id": 4,
         "price": 0.25,
         "description": "Single Lollipop",
@@ -32,7 +32,7 @@
         "thumbnailUrl": "lollipopthumbnail.jpg"
     },
     {
-        "product name": "Chocolate Bar",
+        "product_name": "Chocolate Bar",
         "id": 5,
         "price": 1.15,
         "description": "Single Chocolate Bar",
