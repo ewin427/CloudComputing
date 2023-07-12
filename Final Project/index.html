@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Page Title</title>
+      <title>Candy Shop</title>
     </head>
     <body>
-      <table id="totals"></table>
+      <h1>Candy Shop</h1>
+      <h2>Sales</h2>
+      <table id="sales" border="1"></table>
 
      
       <script>
@@ -16,17 +18,12 @@
         function processData(data){
           var obj = data;
         
-     
-
           quantitys = [3,4,2,1,7]
 
           text = "<tr><th>Product</th><th>Product Name</th><th>Price</th><th>Quantity</th><th>Total</th></tr>";
 
-
           for (let i = 0; i < obj.length; i++) {
             text = text + "<tr>"
-            
-
             
             if (obj[i].price > 0){
               price = obj[i].price
@@ -54,7 +51,7 @@
             console.log(text)
           }
 
-          document.getElementById("totals").innerHTML = text
+          document.getElementById("sales").innerHTML = text
         
         }
 
