@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Page Title</title>
+    </head>
+    <body>
+      <table id="totals"></table>
+
+     
+      <script>
+
+        fetch('https://raw.githubusercontent.com/ErkCurley/CloudComputing/main/HW4/products.json')
+          .then(response => response.json())
+          .then(data => processData(data));
+
+        function processData(data){
+          var obj = data;
+        
+     
+
+          quantitys = [2,5,4,5]
+
+          text = "<tr><th>Product Name</th><th>Price</th><th>Quantity</th><th>Total</th></tr>";
+
+
+          for (let i = 0; i < obj.length; i++) {
+            text = text + "<tr>"
+            
+
+            
+            if (obj[i].price > 0){
+              price = obj[i].price
+            }else{
+              price = 0
+            }
+
+            if (quantitys[i] > 0){
+              quantity = quantitys[i]
+            }else{
+              quantity = 0
+            }
+
+            total = price * quantity
+
+            text = text + "<td>" + "<img height=50px width=50px src= 'products/imgs/" + obj[i].thumbnailUrl + "'>" + "</td>"
+            text = text + "<td>" + "<a href= 'products/" + obj[i].url + "'>" + obj[i].product_name + "</a>" + "</td>" 
+            text = text + "<td>" + price + "</td>"
+            text = text + "<td>" + quantity + "</td>"
+            text = text + "<td>" + total.toPrecision(4) + "</td>"
+            text = text + "<td>" + obj[i].description + "</td>"
+            
+            text = text + "</tr>"
+
+            console.log(text)
+          }
+
+          document.getElementById("totals").innerHTML = text
+        
+        }
+
+      </script>
+
+
+    </body>
+</html>
